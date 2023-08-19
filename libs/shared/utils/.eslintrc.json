@@ -17,7 +17,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "ng-journal",
+            "prefix": "ng-template-khan-esdras",
             "style": "kebab-case"
           }
         ]
