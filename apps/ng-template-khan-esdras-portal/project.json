@@ -20,10 +20,7 @@
           "apps/ng-template-khan-esdras-portal/src/assets"
         ],
         "styles": [
-          "apps/ng-template-khan-esdras-portal/src/styles.scss",
-          "node_modules/primeng/resources/themes/bootstrap4-light-blue/theme.css",
-          "node_modules/primeng/resources/primeng.min.css",
-          "node_modules/primeflex/primeflex.css"
+          "apps/ng-template-khan-esdras-portal/src/styles.scss"
         ],
         "scripts": []
       },
