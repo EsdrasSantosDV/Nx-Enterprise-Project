@@ -1,15 +1,15 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BaseUrl, primeNgModules } from '@ng-journal/shared/utils';
+import { BaseUrl } from '@ng-template-khan-esdras/shared/utils';
 import { RouterOutlet } from '@angular/router';
 
 
 @Component({
-  selector: 'ng-journal-root',
+  selector: 'ng-template-khan-esdras-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, ...primeNgModules],
+  imports: [CommonModule, RouterOutlet],
   template: `
-     Template
+     TeSAD ASDSAD
   `,
   styles: [
     `

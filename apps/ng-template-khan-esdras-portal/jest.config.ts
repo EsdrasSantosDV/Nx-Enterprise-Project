@@ -1,9 +1,9 @@
 /* eslint-disable */
 export default {
-  displayName: 'insurance-portal',
+  displayName: 'ng-template-khan-esdras-portal',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../coverage/apps/insurance-portal',
+  coverageDirectory: '../../coverage/apps/ng-template-khan-esdras-portal',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',
