@@ -2,7 +2,7 @@
   "name": "shared-utils",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/shared/utils/src",
-  "prefix": "ng-journal",
+  "prefix": "ng-template-khan-esdras",
   "tags": ["type:utils", "domain:shared"],
   "projectType": "library",
   "targets": {

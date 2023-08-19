@@ -9,7 +9,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "ngJournal",
+            "prefix": "ngPortal",
             "style": "camelCase"
           }
         ],
@@ -17,7 +17,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "ng-journal",
+            "prefix": "ng-template-khan-esdras",
             "style": "kebab-case"
           }
         ]

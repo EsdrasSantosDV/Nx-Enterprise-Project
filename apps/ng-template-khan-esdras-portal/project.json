@@ -1,29 +1,26 @@
 {
-  "name": "insurance-portal",
+  "name": "ng-template-khan-esdras-portal",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "prefix": "ng-journal",
-  "sourceRoot": "apps/insurance-portal/src",
+  "prefix": "ng-template-khan-esdras",
+  "sourceRoot": "apps/ng-template-khan-esdras-portal/src",
   "tags": ["type:app"],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/insurance-portal",
-        "index": "apps/insurance-portal/src/index.html",
-        "main": "apps/insurance-portal/src/main.ts",
+        "outputPath": "dist/apps/ng-template-khan-esdras-portal",
+        "index": "apps/ng-template-khan-esdras-portal/src/index.html",
+        "main": "apps/ng-template-khan-esdras-portal/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/insurance-portal/tsconfig.app.json",
+        "tsConfig": "apps/ng-template-khan-esdras-portal/tsconfig.app.json",
         "assets": [
-          "apps/insurance-portal/src/favicon.ico",
-          "apps/insurance-portal/src/assets"
+          "apps/ng-template-khan-esdras-portal/src/favicon.ico",
+          "apps/ng-template-khan-esdras-portal/src/assets"
         ],
         "styles": [
-          "apps/insurance-portal/src/styles.scss",
-          "node_modules/primeng/resources/themes/bootstrap4-light-blue/theme.css",
-          "node_modules/primeng/resources/primeng.min.css",
-          "node_modules/primeflex/primeflex.css"
+          "apps/ng-template-khan-esdras-portal/src/styles.scss"
         ],
         "scripts": []
       },
@@ -58,10 +55,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "insurance-portal:build:production"
+          "browserTarget": "ng-template-khan-esdras-portal:build:production"
         },
         "development": {
-          "browserTarget": "insurance-portal:build:development"
+          "browserTarget": "ng-template-khan-esdras-portal:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -69,7 +66,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "insurance-portal:build"
+        "browserTarget": "ng-template-khan-esdras-portal:build"
       }
     },
     "lint": {
@@ -77,8 +74,8 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
-          "apps/insurance-portal/**/*.ts",
-          "apps/insurance-portal/**/*.html"
+          "apps/ng-template-khan-esdras-portal/**/*.ts",
+          "apps/ng-template-khan-esdras-portal/**/*.html"
         ]
       }
     },
@@ -86,7 +83,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/insurance-portal/jest.config.ts",
+        "jestConfig": "apps/ng-template-khan-esdras-portal/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -99,7 +96,7 @@
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "insurance-portal:build"
+        "buildTarget": "ng-template-khan-esdras-portal:build"
       }
     }
   }

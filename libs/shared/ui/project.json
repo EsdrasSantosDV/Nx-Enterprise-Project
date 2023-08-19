@@ -2,7 +2,7 @@
   "name": "shared-ui",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/shared/ui/src",
-  "prefix": "ng-journal",
+  "prefix": "ng-template-khan-esdras",
   "tags": ["type:ui", "domain:shared"],
   "projectType": "library",
   "targets": {

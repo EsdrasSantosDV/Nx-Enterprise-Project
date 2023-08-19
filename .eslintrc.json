@@ -77,35 +77,6 @@
               {
                 "sourceTag": "domain:shared",
                 "onlyDependOnLibsWithTags": ["domain:shared"]
-              },
-              {
-                "sourceTag": "domain:contract",
-                "onlyDependOnLibsWithTags": [
-                  "domain:contract",
-                  "domain:shared",
-                  "domain:customer/api-contract"
-                ]
-              },
-              {
-                "sourceTag": "domain:claim",
-                "onlyDependOnLibsWithTags": [
-                  "domain:claim",
-                  "domain:shared",
-                  "domain:contract/api-claim",
-                  "domain:customer/api-claim"
-                ]
-              },
-              {
-                "sourceTag": "domain:complaint",
-                "onlyDependOnLibsWithTags": [
-                  "domain:complaint",
-                  "domain:shared",
-                  "domain:customer/api-complaint"
-                ]
-              },
-              {
-                "sourceTag": "domain:customer",
-                "onlyDependOnLibsWithTags": ["domain:customer", "domain:shared"]
               }
             ]
           }
