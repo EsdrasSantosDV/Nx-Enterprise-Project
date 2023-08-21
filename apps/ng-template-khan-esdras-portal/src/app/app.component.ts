@@ -1,17 +1,17 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BaseUrl } from '@ng-template-khan-esdras/shared/utils';
-import { RouterOutlet } from '@angular/router';
+import {BaseUrl, materialModules} from '@ng-template-khan-esdras/shared/utils';
+
 
 @Component({
   selector: 'ng-template-khan-esdras-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule,...materialModules],
   template: `<div class="font-mono">
     <header class="px-xl py-md bg-primary-light text-xl font-bold shadow-md">Angular + Tailwind CSS + Nx</header>
-
     <main class="max-w-xl md:max-w-2xl lg:max-w-6xl mx-auto py-xl px-md md:px-xl grid grid-cols-1 gap-md md:grid-cols-2 lg:grid-cols-3">
       <div class="flex flex-col p-lg bg-secondary-light shadow-md hover:shadow-lg">
+        <button mat-raised-button color="accent">Accent</button>
         <div class="pb-md text-lg font-bold">Angular</div>
         <p class="mb-xl flex-1">
           Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.

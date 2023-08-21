@@ -10,12 +10,9 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideRouter(
-      appRoutes,
-      withEnabledBlockingInitialNavigation(),
-      withComponentInputBinding()
-    ),
+    provideRouter(appRoutes, withEnabledBlockingInitialNavigation(), withComponentInputBinding()),
     provideAnimations(),
     provideHttpClient(),
-  ],
+    provideAnimations()
+],
 };
