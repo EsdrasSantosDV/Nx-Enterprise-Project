@@ -1,52 +1,104 @@
 # Nx-Enterprise-Project WMS 
-Enterprise Project WMS
+Enterprise Project
 
-Angular (version 16)
-Standalone APIs
-Material Design
-Tailwind
-Nx
-Nx Generators
-Enterprise Monorepo Pattern
-Signals
-Signal-based State Management
-Route-based Inputs
-Facade Pattern
-OnPush Change Detection
-Observable Pattern
+Projeto Empresarial (Enterprise Project)
+Tecnologias e Padrões Utilizados:
 
-Download dependencies
-npm install
+Angular (versão 16): Framework para desenvolvimento de aplicações web.
 
-run the frontend
-nx serve ng-template-khan-esdras-portal
+Standolone Componentes: Utilização de Componentes autonomos
 
-#Structure Pattern
+Material Design: Linguagem de design para interface do usuário.
 
-feature: A feature module implements a use case (or a technical feature) with so-called smart components. Due to their focus on a feature, such components are not very reusable. Smart Components communicate with the backend. Typically, in Angular, this communication occurs through a store or services.
+Tailwind: Framework CSS para design responsivo.
 
-ui: UI modules contain so-called dumb or presentational components. These are reusable components that support the implementation of individual features but do not know them directly. The implementation of a design system consists of such components. However, UI modules can also contain general technical components that are used across all use cases. An example of this would be a ticket component, which ensures that tickets are presented in the same way in different features. Such components usually only communicate with their environment via properties and events. They do not get access to the backend or a store.
+Nx e Nx Generators: Ferramentas para desenvolvimento monorepo empresarial.
 
-data: Data modules contain the respective domain model (actually the client-side view of it) and services that operate on it. Such services validate e.g. Entities and communicating with the backend. State management, including the provision of view models, can also be accommodated in data modules. This is particularly useful when multiple features in the same domain are based on the same data.
+Padrão Monorepo Empresarial: Estruturação do projeto em um repositório monolítico.
 
-util: General helper functions etc. can be found in utility modules. Examples of this are logging, authentication or working with date values.
+Signals e Gerenciamento de Estado Baseado em Sinal: Abordagem para gerenciamento de estado.
 
-![image](https://github.com/EsdrasSantosDV/Nx-Enterprise-Project/assets/110314802/f16d4f4b-ca4a-4bca-8df7-65b8410fcd9b)
+Entradas Baseadas em Rota: Manipulação de entradas através de rotas.
+
+Padrão de Fachada: Utilização do padrão de fachada para simplificar interações.
+
+Detecção de Mudanças OnPush: Estratégia de detecção de mudanças para otimização de performance.
+
+Padrão Observável: Uso de observáveis para manipulação de eventos assíncronos.
+Comandos:
+
+Instalar Dependências: npm install
+Executar o Frontend: nx serve ng-template-khan-esdras-portal
+Padrão de Estrutura Frontend:
+feature: Módulos de funcionalidade implementam um caso de uso com componentes inteligentes, focados em uma característica específica, e comunicam-se com o backend, geralmente através de uma store ou serviços.
+
+ui: Módulos de UI contêm componentes de apresentação reutilizáveis que suportam a implementação de características individuais, como um sistema de design.
+
+data: Módulos de dados contêm o modelo de domínio e serviços que operam nele, incluindo validação, comunicação com o backend e gerenciamento de estado.
+
+util: Módulos de utilidade contêm funções auxiliares gerais, como logging, autenticação ou manipulação de datas.
+
+#Estrutura monorepo classica
+![monorepo-pattern-classic.png](readme-images-architecture%2Fmonorepo-pattern-classic.png)
 
 
 #Facade Pattern
-A facade is a class that provides a simple interface to a complex subsystem which contains lots of moving parts. A facade might provide limited functionality in comparison to working with the subsystem directly. However, it includes only those features that clients really care about.Having a facade is handy when you need to integrate your app with a sophisticated library that has dozens of features, but you just need a tiny bit of its functionality.
+1. Definição:
+   O padrão Facade fornece uma interface simplificada para um subsistema complexo, encapsulando a complexidade e tornando o subsistema mais fácil de ser utilizado.
+
+2. Problema:
+   Trabalhar diretamente com bibliotecas ou frameworks complexos pode levar a um acoplamento forte e tornar o código difícil de entender e manter.
+
+3. Solução:
+
+Interface Simplificada: A fachada oferece uma interface simples para o cliente, ocultando a complexidade do subsistema.
+Funcionalidade Limitada: A fachada fornece apenas as funcionalidades necessárias para o cliente, tornando a interação mais eficiente.
+Fachadas Adicionais: Podem ser criadas fachadas adicionais para evitar a poluição de uma única fachada com funcionalidades não relevantes.
+4. Estrutura:
+
+Fachada: Fornece acesso conveniente a uma parte específica do subsistema.
+Subsistema Complexo: Consiste em vários objetos que trabalham juntos, cuja complexidade é ocultada pela fachada.
+Cliente: Interage com o subsistema através da fachada, sem necessidade de entender a complexidade subjacente.
+5. Benefícios:
+
+Desacoplamento: Isola o cliente da complexidade do subsistema, promovendo um acoplamento mais fraco.
+Manutenibilidade: Facilita a atualização ou substituição do subsistema, já que as mudanças são encapsuladas na fachada.
+Escalabilidade: Permite a expansão do subsistema sem afetar os clientes que interagem através da fachada.
+6. Exemplo Prático:
+   Uma aplicação que carrega vídeos pode usar uma fachada para interagir com uma biblioteca de conversão de vídeo complexa, utilizando apenas a funcionalidade de codificação necessária.
+
+7. Conclusão:
+   O padrão Facade é uma ferramenta poderosa para simplificar a interação com subsistemas complexos, promovendo um código mais limpo, eficiente e escalável. É especialmente útil quando se deseja fornecer uma interface clara e concisa para uma parte específica de um sistema mais amplo e complicado.
+![facade-book.png](readme-images-architecture%2Ffacade-book.png)
+
+1. Introdução ao Padrão de Fachada e NgRx:
+   O padrão de fachada é utilizado para simplificar a interação com subsistemas complexos, fornecendo uma interface pública mais simples. No contexto do Angular, a biblioteca NgRx é frequentemente usada para gerenciar o estado da aplicação, e o padrão de fachada pode ser aplicado para melhorar o acoplamento e simplificar a interação com essa biblioteca.
+
+2. Problema com Acoplamento Forte:
+   Sem uma fachada, os componentes de exibição precisam conhecer muitos artefatos NgRx, tornando o código complexo e fortemente acoplado ao gerenciamento de estado NgRx.
+
+3. Solução através da Fachada:
+   A fachada agrupa e bloqueia NgRx, mascarando todas as interações internas com Store, actions, reducers, selectors e Effects. Isso simplifica o acesso e a modificação do estado NgRx e reduz a complexidade nas camadas de exibição.
+
+4. Benefícios da Fachada:
+   Produtividade do Desenvolvedor: A fachada aumenta a produtividade, fornecendo uma API de fachada pública explícita.
+   Componentes de Apresentação: Encoraja a pensar em visualizações como componentes que renderizam dados entregues pelos observáveis do Facade.
+   Flexibilidade: Permite mudanças no gerenciamento de estado sem grandes refatorações, afetando apenas a fachada.
+5. Component Store e Acoplamento:
+   O Component Store é sofisticado para gerenciamento de estado simples, mas o acoplamento forte ao gerenciamento de estado pode ser problemático. A fachada remove esse acoplamento rígido, tornando a transição entre diferentes tecnologias de gerenciamento de estado mais suave.
+
+6. Modelo de Estado vs Modelo de Visualização:
+   Imutabilidade: Trabalhar com objetos imutáveis é uma prática recomendada no NgRx.
+   Normalização: A normalização de objetos aninhados melhora o desempenho e a manutenção, separando o State Model (armazenamento) do View Model (uso nos componentes).
+7. Utilização de NgRx e Signals para Gerenciamento de Estado:
+   O projeto utilizará tanto NgRx quanto Signals para o gerenciamento de estado, aproveitando as melhores práticas de programação funcional e imutabilidade. A combinação dessas tecnologias com o padrão de fachada garantirá uma arquitetura robusta, escalável e de alto desempenho.
 
 
+   A implementação do padrão de fachada em conjunto com NgRx e Signals no projeto Angular oferece uma solução elegante e eficiente para o gerenciamento de estado. Essa abordagem promove um código limpo, desacoplado e fácil de manter, permitindo flexibilidade e escalabilidade no desenvolvimento. É uma estratégia essencial para qualquer desenvolvedor que busca excelência na arquitetura de software.
 
-![image](https://github.com/EsdrasSantosDV/Nx-Enterprise-Project/assets/110314802/c206dc4d-d07e-4154-b078-50abfe1ed1d7)
+Este Readme serve como um guia para amigos e colaboradores que desejam entender a estrutura e a arquitetura do projeto, fornecendo uma visão clara e técnica das práticas e padrões adotados.
 
-BEFORE FACADE PATTERN
-![image](https://github.com/EsdrasSantosDV/Nx-Enterprise-Project/assets/110314802/066d5429-98d6-4056-835b-bd6a973f1491)
+Recomendo ler esses seguintes artigos, que são excelentes:
+https://ng-journal.com/blog/2022-12-19-the-enterprise-monorepo-angular-patterns/
 
-AFTER FACADE PATTERN
-![image](https://github.com/EsdrasSantosDV/Nx-Enterprise-Project/assets/110314802/e8f2c446-d344-43d6-8505-2568182f0af2)
-
-
-
-
+https://ng-journal.com/blog/2023-08-09-nx-and-ngrx/
