@@ -34,4 +34,16 @@ util: General helper functions etc. can be found in utility modules. Examples of
 ![image](https://github.com/EsdrasSantosDV/Nx-Enterprise-Project/assets/110314802/f16d4f4b-ca4a-4bca-8df7-65b8410fcd9b)
 
 
+#Facade Pattern
+A facade is a class that provides a simple interface to a complex subsystem which contains lots of moving parts. A facade might provide limited functionality in comparison to working with the subsystem directly. However, it includes only those features that clients really care about.Having a facade is handy when you need to integrate your app with a sophisticated library that has dozens of features, but you just need a tiny bit of its functionality.
 ![image](https://github.com/EsdrasSantosDV/Nx-Enterprise-Project/assets/110314802/c206dc4d-d07e-4154-b078-50abfe1ed1d7)
+
+BEFORE FACADE PATTERN
+![image](https://github.com/EsdrasSantosDV/Nx-Enterprise-Project/assets/110314802/066d5429-98d6-4056-835b-bd6a973f1491)
+
+AFTER FACADE PATTERN
+![image](https://github.com/EsdrasSantosDV/Nx-Enterprise-Project/assets/110314802/e8f2c446-d344-43d6-8505-2568182f0af2)
+
+
+
+
