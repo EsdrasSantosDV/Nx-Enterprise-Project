@@ -14,7 +14,7 @@ import {BaseUrl, materialModules} from '@ng-template-khan-esdras/shared/utils';
         <button mat-raised-button color="accent">Accent</button>
         <div class="pb-md text-lg font-bold">Angular</div>
         <p class="mb-xl flex-1">
-          Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.
+          Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps. hh d d sadsda dd ddd
         </p>
         <a
           class="py-sm px-md bg-primary-dark hover:bg-primary text-white flex self-end"
